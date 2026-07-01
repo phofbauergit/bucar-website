@@ -4,10 +4,11 @@ import { practice } from "@/content/home";
 import { BrandMark } from "@/components/shared/BrandMark";
 import { MeridianFigure } from "@/components/shared/MeridianFigure";
 import { DrawOnScroll } from "@/components/shared/DrawOnScroll";
+import { PulseLinePreview } from "@/components/v3/PulseLinePreview";
 
 export const metadata: Metadata = {
   title: "Homepage-Konzepte | Arztpraxis Dr. Bucar",
-  description: "Zwei Gestaltungskonzepte für die neue Homepage der Arztpraxis Dr. med. Martina Bucar.",
+  description: "Drei Gestaltungskonzepte für die neue Homepage der Arztpraxis Dr. med. Martina Bucar.",
 };
 
 const CONCEPTS = [
@@ -19,6 +20,7 @@ const CONCEPTS = [
     description:
       "Ruhige, editoriale Gestaltung — frostiges Panel im Hero, warme Naturtöne, Fokus auf Vertrauen und Klarheit.",
     tags: ["Lora + Raleway", "Sanft & vertrauensvoll", "Easter Egg: „qi“ tippen"],
+    preview: "meridian-calm" as const,
   },
   {
     href: "/v2",
@@ -28,8 +30,34 @@ const CONCEPTS = [
     description:
       "Markante TCM-Editorial-Ästhetik — Bento-Grid, große Typografie, Tinte & Terrakotta statt Baukasten-Look.",
     tags: ["Fraunces + Source Sans 3", "Mutig & eigenständig", "Easter Egg: 3× klicken"],
+    preview: "meridian-ink" as const,
+  },
+  {
+    href: "/v3",
+    theme: "theme-v3",
+    label: "Konzept 3",
+    name: "Pulse Editorial",
+    description:
+      "Technisch-klinische Editorial-Ästhetik — Vitaldaten-Readouts, Puls-Linie, Befund-Karten und Atem-Widget.",
+    tags: ["Space Grotesk + IBM Plex", "Präzise & seriös", "Easter Egg: Puls 3× klicken"],
+    preview: "pulse" as const,
   },
 ] as const;
+
+function ConceptPreview({ type }: { type: (typeof CONCEPTS)[number]["preview"] }) {
+  if (type === "pulse") {
+    return <PulseLinePreview className="text-v3-signal opacity-90" />;
+  }
+  return (
+    <DrawOnScroll>
+      <MeridianFigure
+        variant={type === "meridian-calm" ? "calm" : "ink"}
+        titleId={`picker-${type}`}
+        className="mx-auto h-44 w-auto opacity-90"
+      />
+    </DrawOnScroll>
+  );
+}
 
 export default function ConceptPicker() {
   return (
@@ -47,15 +75,14 @@ export default function ConceptPicker() {
       <main className="mx-auto max-w-6xl px-6 py-16 lg:px-10 lg:py-20">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-stone-400">Konzeptvorschau</p>
         <h1 className="mt-4 max-w-2xl text-4xl font-semibold leading-tight text-stone-900 sm:text-5xl">
-          Zwei Richtungen für eine zeitgemäße Praxis-Homepage
+          Drei Richtungen für eine zeitgemäße Praxis-Homepage
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-stone-600">
-          Beide Entwürfe nutzen dieselben Praxisinhalte, verfolgen aber unterschiedliche gestalterische Wege —
-          inspiriert von zeitgemäßen Homepages für ganzheitliche Medizin. Dies ist eine interne Vorschau, keine
-          Live-Website.
+          Alle Entwürfe nutzen dieselben Praxisinhalte, verfolgen aber unterschiedliche gestalterische Wege — von ruhig
+          editorial bis technisch-klinisch. Interne Vorschau, kein Live-Betrieb.
         </p>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-2">
+        <div className="mt-14 grid gap-8 lg:grid-cols-3">
           {CONCEPTS.map((concept) => (
             <Link
               key={concept.href}
@@ -63,7 +90,7 @@ export default function ConceptPicker() {
               className={`${concept.theme} group relative flex flex-col overflow-hidden rounded-[1.75rem] border border-black/10 p-8 shadow-sm transition-transform duration-300 hover:-translate-y-1.5 hover:shadow-xl sm:p-10`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold uppercase tracking-[0.3em]" style={{ color: "var(--accent-strong)" }}>
+                <span className="text-xs font-semibold uppercase tracking-[0.3em]" style={{ color: "var(--accent-strong, var(--accent))" }}>
                   {concept.label}
                 </span>
                 <span
@@ -74,20 +101,14 @@ export default function ConceptPicker() {
                 </span>
               </div>
 
-              <h2 className="mt-4 font-display text-3xl leading-tight sm:text-4xl">{concept.name}</h2>
-              <p className="mt-4 max-w-sm text-sm leading-relaxed opacity-80">{concept.description}</p>
+              <h2 className="mt-4 font-display text-3xl leading-tight sm:text-[1.65rem]">{concept.name}</h2>
+              <p className="mt-4 text-sm leading-relaxed opacity-80">{concept.description}</p>
 
               <div className="mt-8 flex-1">
-                <DrawOnScroll>
-                  <MeridianFigure
-                    variant={concept.theme === "theme-v1" ? "calm" : "ink"}
-                    titleId={`picker-meridian-${concept.label}`}
-                    className="mx-auto h-44 w-auto opacity-90"
-                  />
-                </DrawOnScroll>
+                <ConceptPreview type={concept.preview} />
               </div>
 
-              <ul className="mt-6 flex flex-wrap gap-2 text-[0.7rem] uppercase tracking-wide opacity-70">
+              <ul className="mt-6 flex flex-wrap gap-2 text-[0.65rem] uppercase tracking-wide opacity-70">
                 {concept.tags.map((tag) => (
                   <li key={tag} className="rounded-full border border-current px-3 py-1">
                     {tag}

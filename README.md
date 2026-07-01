@@ -1,14 +1,15 @@
 # Arztpraxis Dr. Bucar — Homepage Redesign
 
-Two homepage concepts for [arztpraxis-bucar.de](https://arztpraxis-bucar.de/), inspired by modern holistic medicine practice sites.
+Three homepage concepts for [arztpraxis-bucar.de](https://arztpraxis-bucar.de/), inspired by modern holistic medicine practice sites.
 
 ## Routes
 
 | Path | Concept |
 |------|---------|
-| `/` | Concept picker — choose between both designs |
+| `/` | Concept picker — choose between all three designs |
 | `/v1` | **Curth Calm** — calm editorial layout, warm naturals |
 | `/v2` | **Alpine Meridian** — bold TCM editorial, bento grid |
+| `/v3` | **Pulse Editorial** — clinical editorial, vital readouts, pulse line |
 
 ## Local development
 

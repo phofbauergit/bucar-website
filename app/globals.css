@@ -21,6 +21,15 @@
   --v2-jade: #5b8a72;
   --v2-mist: #e8e2d6;
   --v2-bone: #fbf8f2;
+
+  --v3-paper: #fafaf7;
+  --v3-graphite: #1c1e1b;
+  --v3-signal: #1d7a75;
+  --v3-signal-dim: #1d7a7520;
+  --v3-muted: #e8e8e4;
+  --v3-subtle: #6b7068;
+  --v3-border: #d4d4cf;
+  --v3-surface: #ffffff;
 }
 
 @theme inline {
@@ -39,6 +48,15 @@
   --color-v2-jade: var(--v2-jade);
   --color-v2-mist: var(--v2-mist);
   --color-v2-bone: var(--v2-bone);
+
+  --color-v3-paper: var(--v3-paper);
+  --color-v3-graphite: var(--v3-graphite);
+  --color-v3-signal: var(--v3-signal);
+  --color-v3-signal-dim: var(--v3-signal-dim);
+  --color-v3-muted: var(--v3-muted);
+  --color-v3-subtle: var(--v3-subtle);
+  --color-v3-border: var(--v3-border);
+  --color-v3-surface: var(--v3-surface);
 
   --font-display-a: var(--font-lora);
   --font-body-a: var(--font-raleway);
@@ -79,6 +97,23 @@
   font-family: var(--font-source-sans);
 }
 
+.theme-v3 {
+  --bg: var(--v3-paper);
+  --surface: var(--v3-surface);
+  --muted: var(--v3-muted);
+  --ink: var(--v3-graphite);
+  --accent: var(--v3-signal);
+  --accent-strong: var(--v3-graphite);
+  --highlight: var(--v3-signal);
+  --border: var(--v3-border);
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-ibm-plex);
+  --font-mono: var(--font-jetbrains-mono);
+  color: var(--v3-graphite);
+  background-color: var(--v3-paper);
+  font-family: var(--font-ibm-plex);
+}
+
 /* ============================================================
    Base
    ============================================================ */
@@ -106,6 +141,11 @@ body {
   color: var(--v2-bone);
 }
 
+.theme-v3 ::selection {
+  background: var(--v3-signal);
+  color: #fff;
+}
+
 /* Visible, consistent focus ring for keyboard users */
 :focus-visible {
   outline: 3px solid var(--v1-forest);
@@ -115,6 +155,10 @@ body {
 
 .theme-v2 :focus-visible {
   outline-color: var(--v2-terracotta);
+}
+
+.theme-v3 :focus-visible {
+  outline-color: var(--v3-signal);
 }
 
 /* ============================================================
@@ -202,4 +246,115 @@ body {
     var(--border, rgba(0, 0, 0, 0.12)),
     transparent
   );
+}
+
+/* ============================================================
+   Version C — Pulse Editorial
+   ============================================================ */
+
+.font-mono-v3 {
+  font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/* Kinetic headline — stabilizes on load */
+@keyframes kinetic-settle {
+  from {
+    letter-spacing: 0.12em;
+    font-weight: 300;
+    opacity: 0.55;
+  }
+  to {
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    opacity: 1;
+  }
+}
+
+.kinetic-headline {
+  animation: kinetic-settle 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kinetic-headline {
+    animation: none;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    opacity: 1;
+  }
+}
+
+/* Pulse line draw */
+.pulse-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1800ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.pulse-path.is-drawn,
+.is-drawn .pulse-path {
+  stroke-dashoffset: 0;
+}
+
+/* Pulse line easter egg — path swap handled in JS */
+
+/* Breath widget */
+@keyframes breath-cycle {
+  0%, 100% { transform: scale(0.72); opacity: 0.45; }
+  50% { transform: scale(1); opacity: 0.85; }
+}
+
+.breath-ring {
+  animation: breath-cycle 5000ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .breath-ring {
+    animation: none;
+    transform: scale(0.85);
+    opacity: 0.6;
+  }
+}
+
+/* Phone CTA pulse on hover */
+@keyframes phone-beat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.18); }
+  30% { transform: scale(1); }
+  45% { transform: scale(1.12); }
+  60% { transform: scale(1); }
+}
+
+.phone-beat:hover .phone-beat-icon {
+  animation: phone-beat 800ms ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .phone-beat:hover .phone-beat-icon {
+    animation: none;
+  }
+}
+
+/* Readout counter */
+@keyframes readout-fade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.readout-visible {
+  animation: readout-fade 500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Befund card expand */
+.befund-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.befund-details.is-open {
+  grid-template-rows: 1fr;
+}
+
+.befund-details > div {
+  overflow: hidden;
 }

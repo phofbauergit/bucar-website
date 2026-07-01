@@ -32,6 +32,21 @@ Typography: **Lora** (display) + **Raleway** (body).
 
 Typography: **Fraunces** (display) + **Source Sans 3** (body).
 
+## Version C — Pulse Editorial (`/v3`)
+| Role | Hex | Token |
+|------|-----|-------|
+| Paper | `#FAFAF7` | `--v3-paper` |
+| Graphite | `#1C1E1B` | `--v3-graphite` |
+| Signal | `#1D7A75` | `--v3-signal` |
+| Muted | `#E8E8E4` | `--v3-muted` |
+| Subtle | `#6B7068` | `--v3-subtle` |
+| Border | `#D4D4CF` | `--v3-border` |
+| Surface | `#FFFFFF` | `--v3-surface` |
+
+Typography: **Space Grotesk** (display) + **IBM Plex Sans** (body) + **JetBrains Mono** (readouts).
+
+Interactive elements: Puls-Linie (section divider + easter egg), Meridian-Grid (hero ambient), Readout-Chips (animated counters), Befund-Karten (expandable), Atem-Widget, Puls-CTA on hover.
+
 ## Pass bars (apply to both)
 - Body text contrast ≥ 4.5:1 (WCAG AA)
 - 8px spacing rhythm

@@ -1,0 +1,158 @@
+{
+  "source": "https://arztpraxis-bucar.de/",
+  "scrapedAt": "2026-07-01",
+  "pages": [
+    {
+      "slug": "home",
+      "url": "/",
+      "title": "Home - Arztpraxis Bucar für ganzheitliche Heilmethoden",
+      "heroHeading": "Dr. med. Martina Bucar Ärztin für Allgemeinmedizin",
+      "heroSub": "Schwerpunkt Traditionelle Chinesische Medizin & Ganzheitliche Heilmethoden",
+      "heroIntro": "Mein Interesse gilt der Zusammenführung wirksamer Methoden unterschiedlicher Therapierichtungen.",
+      "philosophyTitle": "Philosophie - Ganzheitliche Gesundheit",
+      "philosophyHeading": "Im Mittelpunkt der Mensch in seiner Ganzheit",
+      "philosophyQuote": "Die Wirkung meiner Behandlungen beruht auf Interaktion mit dem gesamten System des Menschen. Von der strukturell körperlichen Ebene bis in den feinstofflichen nicht sichtbaren Bereich, wie die Meridiane.",
+      "philosophyBody": "Das breite Therapiespektrum und die solide schulmedizinische Basis als Ärztin für Allgemeinmedizin, ermöglichen es mir Ihrer Individualität gerecht zu werden.",
+      "callHeading": "Rufen Sie an, ich freue mich auf Sie!",
+      "aboutQuote": "Ich schaue die Zunge, ich taste den Puls und den Bauch und beobachte die Körpersprache und Körpermerkmale. Daraus ergibt sich ein ganzheitliches Behandlungskonzept das der Individualität jedes einzelnen Menschen Rechnung trägt.",
+      "methodsIntro": "Ergänzend dazu finden auch weniger bekannte Heilverfahren wie die Mikroimmuntherapie, die Plasmatherapie und die Mesotherapie Anwendung. Allen gemeinsam ist – die ausgewählten Therapieformen behandeln den Menschen in seiner Ganzheit.",
+      "methodsMotto": "Wenn du es eilig hast behandle das Symptom, sonst die Ursache.",
+      "balanceQuote": "Etwas Schönes berührt, offenbart sie dessen Schönheit. Wenn sie etwas Schmerzvolles berührt, wandelt sie es um und heilt es. — Thich Nhat Hanh",
+      "therapyListHeading": "Folgende Therapien finden in der Praxis Dr. Bucar Anwendung:"
+    },
+    {
+      "slug": "akupunktur",
+      "url": "/akupunktur/",
+      "title": "Akupunktur & Laserakupunktur",
+      "heading": "Energie folgt der Aufmerksamkeit",
+      "body": "Die Akupunktur nutzt das Jahrtausende alte Wissen über Energieleitbahnen, die den gesamten menschlichen Körper durchziehen und überziehen. Die Lebensenergie, in der Trad. Chinesischen Medizin als \"Qi\" bezeichnet, zirkuliert im menschlichen Körper in Bahnen, den sogenannten Meridianen. Das Setzen von feinen Akupunkturnadeln erlaubt es, mit dieser Lebensenergie in Kontakt zu treten und modulierend auf sie einzuwirken. Akupunkturpunkte sind wie Tore zu Ihrem System. Der Schlüssel zum Tor ist die Akupunkturnadel, oder wahlweise der Akupunktur-Laser.",
+      "styles": "Mein breites Wissen über eine Vielzahl unterschiedlicher Akupunkturstile erlaubt es mir individuell auf Ihre Bedürfnisse einzugehen. Bei der Behandlung von Schmerzen verwende ich mittlerweile fast immer die Balancing Methode nach Dr. Tan. Bei neurologischen Beschwerden, wie z.B bei Lähmungen nach Schlaganfall, kommt mittlerweile immer die Schädelakupunktur nach Yamamoto zum Einsatz, alleinig, oder gemeinsam mit der Meridiantherapie. Bei jeglicher Augenproblematik kombiniere ich gerne die klassische Meridiantherapie mit der Modernen Akupunktur nach Boel."
+    },
+    {
+      "slug": "laserakupunktur",
+      "url": "/laserakupunktur/",
+      "title": "Laserakupunktur - die sanfte Alternative zur Nadelakupunktur",
+      "body": "Die Lasertherapie ist eine schmerzfreie Alternative zur herkömmlichen Nadelakupunktur. Die Intensität der Stimulation des Akupunkturpunktes ist dabei gleichzusetzen mit der Wirkung der herkömmlichen Nadelakupunktur. Kinder werden in meiner Praxis prinzipiell mit dem Laser behandelt, um eine schmerzfreie Behandlung zu gewährleisten. Ferner hat sich die Lasertherapie zur Unterstützung bei Wundheilungsstörungen bewährt. Gerne nutze ich ihn auch zur Entstörung von Narben."
+    },
+    {
+      "slug": "tcm",
+      "url": "/tcm-traditionelle-chinesische-medizin/",
+      "title": "TCM – Traditionelle Chinesische Medizin",
+      "body": "Im Denken der TCM ist der Mensch eine Einheit von Körper – Geist und Seele, überzogen mit feinstofflichen Kanälen, die Meridiane genannt werden. Diese bedecken den ganzen Körper und durchdringen ihn bis hin zu den tiefsten Schichten unseres Seins. Die Meridiane sind untereinander vernetzt und können sich gegenseitig ausgleichen. In der Therapie nutze ich Akupunkturpunkte auf den Meridianen, die wie ein Tor zum System wirken.",
+      "vegetativ": "Die TCM kann sehr gut balancierend auf das vegetative Nervensystem einwirken. Dies ist in der heutigen Zeit dringend notwendig, denn viele Menschen sind durch Überlastung und Dauerstress gefangen in einer Überaktivität des Sympathikus. Dieser Zustand blockiert die natürliche Regenerationsfähigkeit und fördert die Entstehung von Krankheit.",
+      "quote": "Durch die Zentrierung in unserer Mitte verbinden wir uns mit unserer Kraft."
+    },
+    {
+      "slug": "chinesische-heilpflanzen-therapie",
+      "url": "/chinesische-heilpflanzen-therapie/",
+      "title": "Chinesische Pflanzenheilkunde",
+      "heading": "Natürliches für die Natur des Menschen",
+      "body": "Die Chinesische Phytotherapie ist die Königsdisziplin der Traditionellen Chinesischen Medizin. Das Wesen der Pflanze versteht es auf sanfte Art und Weise mit Körper, Geist und Seele zu kommunizieren. Heilpflanzen können nähren, stützen, ausleiten und dabei helfen Stagnationen zu durchbrechen. Grundlage für die Therapie mit Chinesischen Heilpflanzen ist eine solide TCM-Diagnose. Deshalb fühle ich Ihren Puls, schaue Ihre Zunge, taste Ihren Bauch und beobachte auffallende Körpermerkmale."
+    },
+    {
+      "slug": "mesotherapie",
+      "url": "/mesotherapie/",
+      "title": "Mesotherapie",
+      "heading": "Wenig – selten – am richtigen Ort",
+      "body": "Die Mesotherapie ist eine gelungene Alternative zur herkömmlichen Schmerztherapie. Sie ermöglicht die Schmerzmittel sparsamst am Ort des Geschehens aufzubringen. Die Mittel gelangen auf diese Weise direkt – ohne Umwege durch den Körper – an den Ort, an dem sie benötigt werden. Herkömmliche Schmerzmittel können in der Mesotherapie oft durch homöopathische Wirksubstanzen ersetzt werden. Zur besonderen Stützung und Stärkung der eigenen Heilkräfte können auch Aminosäuren, Mineralstoffe und Vitamine ergänzend aufgebracht werden.",
+      "caseQuote": "Ich habe eine 60jährige Patientin mit einer fortgeschrittenen Kniegelenksarthrose mit Mesotherapie und Akupunktur behandelt. Nach der 5. Behandlung war die Patientin schmerzfrei und konnte wieder Wanderungen unternehmen."
+    },
+    {
+      "slug": "plasmatherapie",
+      "url": "/plasmatherapie/",
+      "title": "Plasmatherapie",
+      "body": "Ihr eigenes Blut ist der Ausgangsstoff zur Erzeugung des wertvollen und vielseitig einsetzbaren Plasmas. Die hervorragenden Inhaltsstoffe begründen die Wirksamkeit. Diese beruht insbesondere auf der hohen Konzentration von Wachstumsfaktoren, gewonnen aus den Blutplättchen (Thrombozyten). Ein persönliches Gespräch kann klären, ob diese Therapieform in Ihrem Fall eine sinnvolle Option darstellt."
+    },
+    {
+      "slug": "banerji-protokolle",
+      "url": "/banerji-protokolle/",
+      "title": "Die Banerji Protokolle",
+      "body": "Bereits in den 90ziger Jahren wurden amerikanische Wissenschaftler auf den indischen Homöopathen Dr. Banerji aufmerksam, da es ihm wiederholt gelungen war, alleine mit Homöopathie, auch fortgeschrittene Erkrankungen, zu heilen. Dr. Banerji hat für die Protokolle Homöopathische Mittel ausgewählt, die im ersten Durchgang, in 80% der Fälle Wirkung zeigten."
+    },
+    {
+      "slug": "behandlung-von-kindern",
+      "url": "/behandlung-von-kindern/",
+      "title": "Behandlung von Kindern",
+      "body": "Die Gesundheit von Kindern liegt mir besonders am Herzen. Eine Behandlung ist von Beginn an möglich, sogar schon vor der Geburt, wie z.B im Rahmen einer schwangerschaftsbegleitenden oder geburtsvorbereitenden Akupunktur. Während der Stillzeit kann eine Kräutertherapie über die Mutter und die Muttermilch eingeleitet werden. Kinder jeglichen Alters können mittels Akupunktur und Phytotherapie behandelt werden. Durch die Verwendung der Laserakupunktur kann schmerzlos auf die kindlichen Meridiane eingewirkt werden. Alternativ dazu benutze ich Akupunkturpflaster oder auch Aku-Tapes."
+    },
+    {
+      "slug": "dr-martina-bucar",
+      "url": "/dr-martina-bucar/",
+      "title": "Dr. Martina Bucar",
+      "subtitle": "Ärztin für Allgemeinmedizin",
+      "specializations": "Schwerpunkte: Traditionelle Chinesische Medizin, Ganzheitliche Heilmethoden",
+      "stations": [
+        "Postpromotionelle Tätigkeiten als Turnus- und Assistenzärztin in Spitälern Österreichs und Bayerns",
+        "Hausarztpraxis Dr. Reiter, Österreich",
+        "TCM Klinik Silima, Klinik für Innere und Chinesische Medizin, Chiemgau",
+        "Innere Medizin – Klinikum Traunstein",
+        "Neurologie/Psychiatrie, Barmherzige Brüder, Graz",
+        "Dermatologie – Hautarztpraxis, Prien am Chiemsee",
+        "HNO-Praxis, Holzkirchen",
+        "Gynäkologie und Geburtsheilkunde, Frauenklinik Prien am Chiemsee",
+        "Allgemeinchirurgie in Schladming und Kufstein",
+        "Pädiatrie in der Kinderklinik Graz"
+      ],
+      "milestones": [
+        "Ärztin für Allgemeinmedizin (Ö) seit 2010",
+        "3 Jahre Stations- und Ambulanzärztin der TCM-Klinik Silima",
+        "2 Jahre HNO-Praxis Holzkirchen, Dr. Huber, Teilzeit",
+        "seit 2019 Chefärztin der Abteilung für Chinesische Medizin der Privatklinik Jägerwinkel, Bad Wiessee"
+      ],
+      "qualifications": [
+        "Aus- und Weiterbildung in Traditioneller Chinesischer Medizin seit 1998",
+        "Akupunkturdiplom der Österreichischen Ärztekammer",
+        "Ausbildung in Akupunktur und Psychosomatik in der TCM, Dr. Greten, Heidelberg",
+        "Chinesische Phytotherapie bei der DECA in der Klinik Silima und der Klinik am Steigerwald",
+        "Klassische Chinesische Phytotherapie nach Dr. Volker Scheid, AGTCM",
+        "Ausbildung in Balancing Acupuncture nach Dr. TAN seit 2019",
+        "Moxa in Motion – Die Ontake Methode nach Oran Kivity, München",
+        "Mikroimmuntherapie",
+        "Mesotherapiefortbildung Deutschland & Österreich",
+        "PRP – Plasmatherapie",
+        "Homöopathie – Banerji Protokolle bei Dr. Miguel Corty und Dr. Michaela Dane",
+        "Chelattherapie, Orthomolekulare Infusionskonzepte und Entgiftungsstrategien",
+        "Orthomolekulare Medizin bei der AOM Österreich (in Ausbildung)"
+      ]
+    },
+    {
+      "slug": "kontakt",
+      "url": "/kontakt/",
+      "title": "Kontakt",
+      "heading": "Praxisort",
+      "phone": "+49 15755966677",
+      "email": "tcm@arztpraxis-bucar.de",
+      "locations": [
+        {
+          "name": "Huglfing",
+          "address": "Kapellenleite 6, 82386 Huglfing",
+          "hours": "Montag, Mittwoch, Freitag 10–18 Uhr"
+        },
+        {
+          "name": "Grünwald",
+          "address": "Rathausstraße 2, Eingang über Luitpoldweg",
+          "hours": "Nach Vereinbarung"
+        }
+      ],
+      "note": "Bitte telefonisch anmelden"
+    },
+    {
+      "slug": "impressum",
+      "url": "/impressum/",
+      "title": "Impressum",
+      "provider": "Dr. Martina Bucar Allgemeinärztin & Praxis",
+      "phone": "+49 15755966677",
+      "address": "Kapellenleite 6, 82386 Huglfing",
+      "responsible": "Dr. Martina Bucar Allgemeinärztin, Am Fügsee 39, 82418 Seehausen am Staffelsee, DE",
+      "imageSource": "123rf.com",
+      "stand": "Oktober 2019"
+    },
+    {
+      "slug": "datenschutz",
+      "url": "/datenschutz/",
+      "title": "Datenschutzerklärung",
+      "summary": "DSGVO/BDSG-konforme Datenschutzerklärung. Verarbeitet Zugriffsdaten, Cookies, Mitteilungsdaten über Webhosting-Anbieter. Bindet Google Fonts und YouTube (erweiterter Datenschutz-Modus) ein.",
+      "responsible": "Dr. Martina Bucar Allgemeinärztin, Am Fügsee 39, 82418 Seehausen am Staffelsee"
+    }
+  ]
+}

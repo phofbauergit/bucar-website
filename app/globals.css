@@ -1,0 +1,205 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Design tokens — Version A (Curth Calm) & Version B (Alpine Meridian)
+   See content/design-system.md
+   ============================================================ */
+
+:root {
+  --v1-bg: #faf8f5;
+  --v1-surface: #ffffff;
+  --v1-muted: #f0efec;
+  --v1-ink: #2d4a3e;
+  --v1-sage: #8fa898;
+  --v1-clay: #c4a484;
+  --v1-forest: #1f3a30;
+  --v1-border: #e2dfd8;
+
+  --v2-ink: #1a1f1c;
+  --v2-parchment: #f3ede4;
+  --v2-terracotta: #b85c38;
+  --v2-jade: #5b8a72;
+  --v2-mist: #e8e2d6;
+  --v2-bone: #fbf8f2;
+}
+
+@theme inline {
+  --color-v1-bg: var(--v1-bg);
+  --color-v1-surface: var(--v1-surface);
+  --color-v1-muted: var(--v1-muted);
+  --color-v1-ink: var(--v1-ink);
+  --color-v1-sage: var(--v1-sage);
+  --color-v1-clay: var(--v1-clay);
+  --color-v1-forest: var(--v1-forest);
+  --color-v1-border: var(--v1-border);
+
+  --color-v2-ink: var(--v2-ink);
+  --color-v2-parchment: var(--v2-parchment);
+  --color-v2-terracotta: var(--v2-terracotta);
+  --color-v2-jade: var(--v2-jade);
+  --color-v2-mist: var(--v2-mist);
+  --color-v2-bone: var(--v2-bone);
+
+  --font-display-a: var(--font-lora);
+  --font-body-a: var(--font-raleway);
+  --font-display-b: var(--font-fraunces);
+  --font-body-b: var(--font-source-sans);
+}
+
+/* Version-scoped theme wrappers */
+.theme-v1 {
+  --bg: var(--v1-bg);
+  --surface: var(--v1-surface);
+  --muted: var(--v1-muted);
+  --ink: var(--v1-ink);
+  --accent: var(--v1-sage);
+  --accent-strong: var(--v1-forest);
+  --highlight: var(--v1-clay);
+  --border: var(--v1-border);
+  --font-display: var(--font-lora);
+  --font-body: var(--font-raleway);
+  color: var(--v1-ink);
+  background-color: var(--v1-bg);
+  font-family: var(--font-raleway);
+}
+
+.theme-v2 {
+  --bg: var(--v2-bone);
+  --surface: var(--v2-parchment);
+  --muted: var(--v2-mist);
+  --ink: var(--v2-ink);
+  --accent: var(--v2-jade);
+  --accent-strong: var(--v2-ink);
+  --highlight: var(--v2-terracotta);
+  --border: var(--v2-mist);
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-source-sans);
+  color: var(--v2-ink);
+  background-color: var(--v2-bone);
+  font-family: var(--font-source-sans);
+}
+
+/* ============================================================
+   Base
+   ============================================================ */
+
+* {
+  border-color: var(--border, currentColor);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  font-family: var(--font-raleway), var(--font-source-sans), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--v1-sage);
+  color: #fff;
+}
+
+.theme-v2 ::selection {
+  background: var(--v2-terracotta);
+  color: var(--v2-bone);
+}
+
+/* Visible, consistent focus ring for keyboard users */
+:focus-visible {
+  outline: 3px solid var(--v1-forest);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.theme-v2 :focus-visible {
+  outline-color: var(--v2-terracotta);
+}
+
+/* ============================================================
+   Motion utilities — respect prefers-reduced-motion
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 600ms cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Meridian path draw-on-scroll (v2) */
+.meridian-path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 1400ms cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.meridian-path.is-drawn,
+.is-drawn .meridian-path {
+  stroke-dashoffset: 0;
+}
+
+/* Qi pulse (v1 easter egg) */
+@keyframes qi-pulse {
+  0%, 100% { opacity: 0.15; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(1.08); }
+}
+
+.qi-active .qi-node {
+  animation: qi-pulse 2200ms ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qi-active .qi-node {
+    animation: none;
+    opacity: 0.3;
+  }
+}
+
+/* Magnetic CTA hover (v2) — no layout shift */
+.magnetic {
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Version-scoped font utilities (font-display-a/-b are Tailwind-generated;
+   these resolve to whichever version wraps the element via .theme-v1/.theme-v2) */
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Thin top accent line for sections */
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--border, rgba(0, 0, 0, 0.12)),
+    transparent
+  );
+}
